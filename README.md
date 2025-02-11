@@ -7,6 +7,7 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Configuramos e alteramos os campos das tabelas do metadados.
 
 ## Criando Dimensões e Medidas
+### DIMENSÕES
 - Vamos criar as dimensões dentro do QLINK.
 - Clicando no logo da QLIK voltamos à página inicial.
 - Clicando nos três pontos da janela da aplicação escolha a opção Duplicar.
@@ -47,8 +48,9 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Nomeie como Vendedor e descrição Dimensão Vendedor com a próxima cor.
 - Clique em Criar e Fechar.
 - Foram criadas as sete dimensões do metadados da Fábrica de sucos.
-- Clique no símbolo do QLIK e volte à página principal.
-- Duplique e edite o aplicativo. E coloque no nome Criação das Dimensões.
+
+### MEDIDAS
+
 - Abra o aplicativo.
 - Na página principal clique em Minha Pasta.
 - Clique agora em Editar pasta.
@@ -142,14 +144,15 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Renomeie a cópia da aplicação para BI da Empresa de Suco de Frutas - Criação das Medidas.
 
 ## CRIANDO AS VISÕES
-
 - Vamos montar a primeira visão.
 - Clique em Minha nova pasta.
 - Na janela de Propriedades da pasta coloque Primeira visão com o QLIK em Título.
 - Clique em Edição concluída e verifique que na página inicial aparece o título que foi modificado.
 - Clique em Editar pasta.
 - Quando clicar em Gráficos aparecem uma série de gráficos que podem ser usado.
-- Arraste KPi para a região superior esquerda.
+
+  ### GRÁFICO DE KPI  
+- Arraste KPI para a região superior esquerda.
 - Clique em Itens mestres e Medidas e arraste a medida Faturamento em R$.
 - Altere as dimensões do KPi.
 - Clicando em Gráficos e escolhendo e arrastando o elemento Painel de filtro.
@@ -160,12 +163,12 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Em Medida escolha e arraste Faturamento para o gráfico de barra.
 - Clique em Edição concluída e acompanhe as características da visão.
 - Preste atenção na formatação quando for salvar a visão.
-- Vamos analisar cada tipo de gráfico.
-- Duplique a pasta e nomeie como Gráfico de Barra.
+
+### GRÁFICO DE BARRAS
 - Abra a pasta original e clique em Editar pasta.
 - Selecione cada quadro e apague apertando a tecla Delete.
 - Clicando em Gráficos e arraste Painel de filtro para a visão.
-- Marcando Campos e abrir Data arraste Year para cima do filtro.
+- Marcando Campos e abrir Data arraste Year para cima do filtro.'
 - Ajuste o tamanho do quadro e clique em DataYear.
 - Mude o Título para Selecione o ano.
 - Clique em Edição concluída para ver como o filtro está funcionando.
@@ -184,8 +187,8 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Altere o gráfico de acordo com o vídeo e escolha a melhor aparência para o gráfico.
 - Clicando em Edição concluída e veja o funcionamento do filtro alterando o gráfico.
 - Clique nos três pontos e escolha Visão geral do aplicativo.
-- Clique no logo QLIK e duplique a aplicação e nomeie como BI da Empresa de Suco de Fruta - Gráfico de Barra.
-- Abra a aplicação e duplique a pasta do gráfico de barra nomeando como Gráfico de Linha.
+
+### GRÁFICO DE LINHAS
 - Clique em Editar pasta e clique no gráfico e aperte Delete para apagar o gráfico.
 - Em Gráficos escolha Gráfico de linha.
 - Em Campos e Data escolha YearMonth e arraste para o gráfico.
@@ -197,8 +200,8 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Em Estilo mude as características da linha.
 - lique em Edição concluída.
 - Veja como ficou o gráfico.
-- Clique no logo QLIK e duplique a aplicativo e nomeie como BI da Empresa de Suco de Fruta - Gráfico de Linha.
-- Abra a aplicação e duplique a pasta do gráfico de barra nomeando como Gráfico de Pizza.
+
+### GRÁFICO DE PIZZA
 - Clique em Editar pasta e clique no gráfico e aperte Delete para apagar o gráfico.
 - Em Gráficos escolha Gráfico de pizza. Ajuste o gráfico.
 - Em Campos escolha Categoria e arraste para o gráfico.
@@ -206,8 +209,8 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Com o gráfico selecionado em Aparência/Geral coloque o título Distribuição de faturamento por categoria e o subtítulo Valores expressos em reais.
 - Clique em Edição concluída.
 - Veja que pode girar o gráfico e o filtro continua a funcionar.
-- Clique no logo QLIK e duplique a aplicativo e nomeie como BI da Empresa de Suco de Fruta - Gráfico de Pizza.
-- Abra a aplicação e duplique a pasta do gráfico de barra nomeando como Mapas.
+
+### MAPAS
 - Mais uma vez clique em Editar pasta, selecione o gráfico e aperte Delete para apagar o gráfico.
 - Em Gráficos escolha Mapa e agora ajuste o gráfico.
 - Em Campos escolha Estado e arraste para o gráfico.
@@ -229,9 +232,8 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Dê um clique no título e altere para Faturamento distribuído por estados.
 - Clique em Edição concluída.
 - Veja o que altera no gráfico e que o filtro continua a funcionar.
-- Volte a área principal do QLIK, duplique a aplicação mestre e salve como BI da Empresa de Suco de Fruta - Mapas.
-- No menu principal clique em Catálogo e escolha a o botão com três traços (em forma de lista).
-- Abra a aplicação e duplique a pasta do gráfico de barra nomeando como Mapas Bolha.
+
+### MAPA DE BOLHAS
 - Em Campos escolha Cidade e arraste para o gráfico. Escolhe uma nova camada de dados Adicionar como camada de ponto.
 - Na aba da direita clique em Camadas e Cidade** e abra Tamanho e forma e aumente o tamanho do círculo.
 - Em Dimensionar por escolha o campo Margem em R$.
@@ -239,3 +241,126 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Clique em Edição concluída.
 - Veja que pode girar o gráfico e o filtro continua a funcionar.
 - Clique no logo QLIK e duplique a aplicativo e nomeie como BI da Empresa de Suco de Fruta - Mapa Bolha.
+
+### MAPA DE ÁRVORE
+- Em Gráficos escolha Mapa de árvore e ajuste o gráfico.
+- Em Campos escolha Região como dimensão e arraste para o gráfico.
+- Escolha como medida o campo Faturamento em Itens mestres.
+- Clique em Incluir e escolha Categoria.
+- Com duas dimensões o gráfico mostra que a área maior representa a região e os retângulos menores a categoria.
+- Em Aparência altere o Título para Distribuição de Faturamento por Região e Categoria.
+- Clique em Edição concluída.
+
+### MOSTRADORES / APONTADORES
+- Em Gráficos escolha Mostrador. Ajuste o gráfico.
+- Em Itens mestres/Medidas escolha e arraste Variação da Meta do Faturamento em % para cima do gráfico.
+- Com o gráfico selecionado em Aparência/Geral coloque o título Variação da Meta do Faturamento.
+- Em Apresentação coloque nos limtes de -50 a +50.
+- Clique na opção Usar segmento e desmarque Usar biblioteca.
+- Agora clique em Adicionar limite e coloque como -10.
+- Clique em cima da primeira área para trocar a cor para vermelho.
+- Agora clique em Adicionar limite e coloque como 10.
+- Clique em cima da segunda área para trocar a cor para amarelo.
+- Finalmente clique em Adicionar limite e coloque como 50.
+- Clique em cima da terceira área para trocar a cor para verde. Pode ser usado o gradiente para escolher a cor.
+- Clique em Edição concluída.
+- Veja que pode alterar o gráfico e o filtro continua a funcionar.
+
+### DISPERSÃO
+- Clicando em Itens mestres/Medidas escolha Criar nova.
+- Coloque no nome Margem Unitária (R$/Litros) e acrescente a expressão usando as medidas Margem em R$/Quantidade Vendida em Litros. - 
+- Escolha uma cor e clique Criar.
+- Em Gráficos escolha Dispersão. Ajuste o tamanho do gráfico.
+- Em Campos escolha Produto e arraste para o gráfico.
+- Em Itens mestres/Medidas escolha e arraste Faturamento em R$ para o Eixo X no gráfico.
+- Em Itens mestres/Medidas escolha e arraste Margem Unitária (R$/Litros) para o Eixo Y no gráfico.
+- Clique no título do gráfico e altere para Comparação entre Faturamento e Margem Unitária.
+- Clique em Edição concluída.
+
+### TABELA
+- Em Gráficos escolha Tabela. Ajuste o gráfico.
+- Em Campos escolha Estado, Cliente e arraste para o gráfico.
+- Em Itens mestres/Medidas escolha e arraste Faturamento em R$ para o gráfico.
+- Na aba direita escolha Faturamento em R$ desmarque a formatação automática.
+- Em Formato numérico escolha Moeda. Troque o padrão de formato.
+- Com o gráfico selecionado em Aparência/Geral coloque o título Faturamento por Estado e Cliente .
+- Em Apresentação desmarque Totais. Escolha em Posição a opção Inferior
+- Clique em Edição concluída.
+
+### USANDO AS DIMENSÕES / DRILLDOWN  
+- Em Gráficos escolha Gráfico de pizza.
+- Em Itens mestres/Dimensões escolha Geográfica e arraste para o gráfico.
+- Em Medidas escolha e arraste Faturamento em R$ para o gráfico.
+- Ajuste o gráfico.
+- Em Gráficos escolha Gráfico de barra.
+- Em Itens mestres/Dimensões escolha Produto e arraste para o gráfico.
+- Em Medidas escolha e arraste Faturamento em R$ para o gráfico.
+- Com o segundo gráfico selecionado clique em Aparência e escolha a opção Estilo Horizontal e na Classificação coloque Faturamento em R$ no topo da lista.
+- Nomeie o gráfico de pizza como Faturamento por Geografia e no de barra Faturamento por Produto.
+- Clicando nas partes dos gráficos automaticamente são criados filtros.
+
+### DASHBOARDS
+- Vamos escolher as pastas que farão parte do Dashboard.
+- Clique no mapa Gráfico de Barras.
+- Selecionando o gráfico clique nos três pontos e escolha a opção Adicionar aos itens mestres.
+- Mantenha o nome Faturamento por Cliente e clique em Incluir.
+- Clicando nos três pontos ao lado do logo QLIK escolha a opção Visão geral do aplicativo.
+- Escolha o Gráfico de Pizza.
+- Com o gráfico selecionado clique nos três pontos e escolha a opção Adicionar aos itens mestres. E Incluir.
+- Novamente clique nos três pontos ao lado do logo QLIK escolha a opção Visão geral do aplicativo.
+- Agora clique para abrir a pasta Mostradores.
+- Com o gráfico selecionado clique nos três pontos e escolha a opção Adicionar aos itens mestres. E Incluir.
+- Agora clique nos três pontos ao lado do logo QLIK escolha a opção Visão geral do aplicativo.
+- Crie e abra uma nova pasta com o nome Dashboard.
+- Clique em Editar pasta.
+- Em Gráficos escolha o campo Painel de Filtro.
+- Em Campos arraste Data/Year e Fábrica para cima do filtro.
+- Ajuste o filtro com uma linha.
+- Na aba da direita em Data/Year troque o título para Ano.
+- Abra a aba Visualizações e arraste todas para a área da visão.
+- Aumento o gráfico de barras para ocupar a área da esquerda e coloque na direita a pizza sobre o mostrador.
+- Clique em Edição concluída para ver a exibição.
+- Clicando em Ano ou Fábrica os gráficos são sensibilizados.
+- Pode fechar os filtros criados automaticamente para salvar a posição original.
+
+### CRIANDO UMA NARRATIVA
+- Abra o aplicativo mestre BI de Empresa de Sucos de Frutas e a pasta Dashboard.
+- Clicando no filtro Ano escolha 2012.
+- Nos três pontos do Mostrador escolha Snapshots de narrativa e depois Tirar snapshot.
+- Na janela aberta escreva 1 - Meta de Faturamento 2012 e clique em Salvar.
+- Clicando no filtro Ano escolha 2015.
+- Nos três pontos do Mostrador escolha Snapshots de narrativa e depois Tirar snapshot.
+- Na janela aberta escreva 2 - Meta de Faturamento 2015 e clique em Salvar.
+- Clicando nas cidades do gráfico de barras pode ver qual cidade ajudou na recuperação da meta.
+- Escolha a cidade Campinas.
+- Nos três pontos do Mostrador escolha Snapshots de narrativa e depois Tirar snapshot.
+- Na janela aberta escreva 3 - Meta de Faturamento em 2015 para Campinas e clique em Salvar.
+- Clicando nas cidades do gráfico de pizza pode ver qual produto ajudou na recuperação da meta.
+- Escolha o produto Mate no gráfico de pizza.
+- Nos três pontos do Mostrador escolha Snapshots de narrativa e depois Tirar snapshot.
+- Na janela aberta escreva 4 - Meta de Faturamento em 2015 para Campinas e Mate e clique em Salvar.
+- Clicando no botão Pastas escolha Gráfico de Linhas. O gráfico de linha é aberto. Acompanhe a explicação do vídeo.
+- Nos três pontos do gráfico e escolha Snapshots de narrativa e depois Tirar snapshot.
+- Na janela aberta escreva 5 - Sazonalidade das vendas de mate em 2015 em Campinas e clique em Salvar.
+- Clique no botão Narrativa.
+- Na janela aberta clique nq A** e arraste **Titulo para área em branco. Escreva Análise da Meta de Faturamento.
+- Clique no botão Biblioteca de Snapshot e escolha o primeiro.
+- Clicando no lápis pode alterar algum formato do snapshot. Retire o título, coloque Somente rótulos e em Escalas escolha estreito.
+- Clicando no A** escolha **Paragrafo entre com o texto do parágrafo. Formate o parágrafo.
+- Acrescente um novo snapshot clicando no botão Biblioteca de snapshot. Arraste o segundo para dentro da área em branco.
+- Clicando no lápis pode alterar algum formato do snapshot. Retire o título, coloque Somente rótulos e em Escalas escolha estreito.
+- Clicando no A** escolha **Paragrafo entre com o texto do parágrafo. Formate o parágrafo.
+- Clicando com o botão direito do mouse no slide escolha a opção Duplicar.
+- Apague todos os componentes selecionando e apertando a tecla Delete.
+- Clique no botão Biblioteca de Snapshot e escolha o número 3.
+- Copie as características do snapshoot.
+- Copie e cole o texto dos outros mostradores. Altere o texto
+- Acrescente um novo snapshot clicando no botão Biblioteca de snapshot. Arraste o quarto para dentro da área em branco.
+- Edite e deixe com as mesmas características dos outros mostradores.
+- Copie cole o texto anterior. Edite o parágrafo.
+- Clicando com o botão direito do mouse no slide escolha a opção Duplicar.
+- Apague todos os componentes selecionando e apertando a tecla Delete.
+- Clicando no lápis altere o do snapshot. Retire o título, coloque Somente rótulos e em Escalas escolha estreito.
+- Copie cole o texto anterior. Edite o parágrafo.
+- Clique em Histórias para verificar se foi criada.
+- Clique em Reproduzir a história.
