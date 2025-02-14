@@ -364,3 +364,63 @@ Curso de Qlik Sense, ferramenta para criação de BI
 - Copie cole o texto anterior. Edite o parágrafo.
 - Clique em Histórias para verificar se foi criada.
 - Clique em Reproduzir a história.
+
+## SCRIPT
+
+### BUSCAR ULTIMAS 12 PLANILHAS
+  Criar uma script para automatizar o upload de planilhas, para que seja feito upload somente dos ultimos 12 meses a partir da data de planilha mais recente.
+
+LET v_Diretorio_CSV = 'lib://Formação Qlik:DataFiles';
+
+FOR Each v_CSVArquivos in FileList('$(v_Diretorio_CSV)/*.CSV')
+  //Trace $(v_CSVArquivos);
+  Temp_Lista_Arquivos:
+    LOAD
+    	'$(v_CSVArquivos)' AS Arquivo_nome_full,
+        SubField('$(v_CSVArquivos)', '/',4) AS Arquivo,
+        SubField(SubField('$(v_CSVArquivos)', '/',4),'_',2) 
+        	& REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV','') AS Ano_Mes_Arquivo_2,
+        If(Num#(REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV','')) <= 9,
+        	'0' & (REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV','')),
+        (REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV',''))) AS Mes_Arquivo,
+        Date(Date#(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',2) & If(Num#(REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV','')) <= 9,
+        	'0' & (REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV','')),
+        (REPLACE(SubField(SubField('$(v_CSVArquivos)', '/',4),'_',3),'.CSV',''))),'YYYYMM')) AS Ano_Mes_Arquivo
+        AutoGenerate 1;
+        
+Next v_CSVArquivos;
+
+temp:
+LOAD 
+	date(MAX(Ano_Mes_Arquivo)) AS Max_Data,
+    AddMonths(date(MAX(Ano_Mes_Arquivo)), - 11) AS Min_Data
+Resident Temp_Lista_Arquivos;
+
+Let Maior_mes = Peek('Max_Data');
+Let Menor_mes = Peek('Min_Data');
+
+NoConcatenate
+Final_Lista_Arquivos:
+LOAD * Resident Temp_Lista_Arquivos 
+Where Ano_Mes_Arquivo >= '$(Menor_mes)' 
+	AND Ano_Mes_Arquivo <= '$(Maior_mes)';
+
+DROP TABLE Temp_Lista_Arquivos;
+
+For vArquivo = 1 to NoOfRows('Final_Lista_Arquivos')
+	Let vArquivoNomeCarga = Peek('Arquivo_nome_full', vArquivo -1, 'Final_Lista_Arquivos');
+	trace '$(vArquivoNomeCarga)';
+
+Next vArquivo
+
+LOAD
+    cpf,
+    data_venda,
+    matricula,
+    codigo_do_produto,
+    quantidade,
+    faturamento
+FROM [$(vArquivoNomeCarga)]
+(txt, utf8, embedded labels, delimiter is ';', msq);
+
+DROP TABLE Final_Lista_Arquivos;
