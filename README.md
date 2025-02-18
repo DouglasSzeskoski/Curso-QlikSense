@@ -424,3 +424,42 @@ FROM [$(vArquivoNomeCarga)]
 (txt, utf8, embedded labels, delimiter is ';', msq);
 
 DROP TABLE Final_Lista_Arquivos;
+
+## SET ANALYSIS
+
+### Valor Fixo
+SUM({1} ValorVenda)
+
+### Valor fixado para Brazil
+SUM( {< ClientePais = {Brazil} ValorVenda)
+
+### Valor fica fixado para Brazil e Argentina
+SUM( {< ClientePais = {'Brazil', 'Argentina'} >}   ValorVenda)
+SUM( {< ClientePais = {'Brazil', 'Argentina'}, VendaAno = {'2017'}  >}   ValorVenda)
+
+### Aplicando filtro em categorias que iniciam com "Con"
+SUM({<CategoriaNome={"Con*"}>}ValorVenda)Copiar código
+
+### Filtros em datas
+SUM({<DataVenda={">=1/1/2018<=1/10/2018"}> }  ValorVenda)
+
+### YTD de vendas
+SUM(
+{ < DataVenda={">=$(=max(DataVenda))"}>} ValorVenda)
+
+### Função para buscar inicio do ano conforme o filtro de data
+=YearStart(max(DataVenda))Copiar código
+SUM({  <DataVenda={">=$(=YearStart(Max(DataVenda)))"}>}ValorVenda)
+
+### Função para buscar inicio do ano PASSADO conforme o filtro de data
+=YearStart(max(DataVenda),-1)
+
+### Função para buscar o fim do mes, conforme filtro de data
+=MonthEnd(max(DataVenda),-12)
+
+### Buscar a comparação dos ultimos 12 meses
+SUM({<DataVenda={">=$(=YearStart(Max(DataVenda),-1))<=$(=MonthEnd(max(DataVenda),-12))"}>}ValorVenda)
+
+### Juntando a função do SET Analysis com o AGGR
+max(aggr(sum(ValorVenda), NumeroVenda, VendaAno))
+max(aggr(sum({<VendaAno={">=$(=2017)"}>} ValorVenda), NumeroVenda, VendaAno))
